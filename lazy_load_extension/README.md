@@ -1,0 +1,1 @@
+This file contains a Firefox extension as part of my final year project.

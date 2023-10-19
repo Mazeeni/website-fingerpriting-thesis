@@ -1,0 +1,22 @@
+{
+	https_port 20002
+	http_port 20001
+	local_certs
+}
+
+:20002 {
+	root * ./wbns
+	encode gzip
+	file_server
+	
+	tls internal {
+		on_demand
+	}
+
+	header { # set header for all pages (this doesn't make a difference)
+		Content-Type application/webbundle
+		X-Content-Type-Options: nosniff
+	}
+}
+
+
